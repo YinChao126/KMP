@@ -1,7 +1,7 @@
 #include "KMP.h"
 
 #ifdef Cplusplus
-int kmp_find(const string& target, const string& pattern)
+int KmpFind(const string& target, const string& pattern)
 {
 	const int target_length = target.size();
 	const int pattern_length = pattern.size();
@@ -55,7 +55,7 @@ int kmp_find(const string& target, const string& pattern)
 }
 
 #else
-int kmp_find(const char *target, const char *pattern)
+int KmpFind(const char *target, const char *pattern)
 {
 	const int target_length = strlen(target);
 	const int pattern_length = strlen(pattern);
@@ -112,3 +112,5 @@ int kmp_find(const char *target, const char *pattern)
 	free(overlay_value);
 }
 #endif
+
+

@@ -1,15 +1,15 @@
-#include "KMP.h"
+#include "AT_Codec.h"
+#include <stdio.h>
+#include <Windows.h>
+
 
 int main()
 {
-#ifdef Cplusplus
-	string source = "annbcdanacadsannannabnna";
-	string pattern = "annann";
-	cout << kmp_find(source, pattern) << endl;
-#else
-	char *source = "annbcdanacadsannannabnna";
-	char *pattern = "annann";
-	int index = kmp_find(source, pattern);
-#endif
+	char *RecStr = "AT+parameter=98.176\r\n";
+	int id;
+	double value;
+	AtDecoder(RecStr, &id, &value);
+	system("pause");
+
 	return 0;
 }
